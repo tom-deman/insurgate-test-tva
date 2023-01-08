@@ -25,7 +25,14 @@ const SearchField = ( { setCompanyData } ) => {
             await fetch( `https://04ibs0zhna.execute-api.eu-central-1.amazonaws.com/staging/company?number=${ inputValue }`, {
                 headers: headers
             } )
-                .then( res => res.json() )
+                .then( res => {
+                    if( res.status === 200 ) {
+                        return res.json()
+                    }
+                    else if( res.status === 400 || res.status === 500 ) {
+                        setError( 'Server error, please try again.' )
+                    }
+                } )
                 .then( data => {
                     setCompanyData( data.company )
                     setInputValue( '' )
