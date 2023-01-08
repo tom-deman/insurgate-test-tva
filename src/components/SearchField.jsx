@@ -26,7 +26,10 @@ const SearchField = ( { setCompanyData } ) => {
                 headers: headers
             } )
                 .then( res => res.json() )
-                .then( data => { setCompanyData( data.company ) } )
+                .then( data => {
+                    setCompanyData( data.company )
+                    setInputValue( '' )
+                } )
                 .catch( err => console.error( err ) )
         }
     }
@@ -40,10 +43,10 @@ const SearchField = ( { setCompanyData } ) => {
                     type="text"
                     id="tva-search"
                     placeholder="Enter your VAT number here"
-                    className="bg-blue-100 w-11/12 py-2 px-6 outline-none shadow-lg border border-blue-200 shadow-blue-50"
+                    className="bg-blue-100 lg:w-11/12 w-5/6 py-2 px-6 outline-none shadow-lg border border-blue-200 shadow-blue-50"
                 />
                 <button
-                    className="w-1/12 border-blue-200 border border-l-0 hover:bg-blue-50 flex justify-center items-center"
+                    className="lg:w-1/12 w-1/6 border-blue-200 border border-l-0 hover:bg-blue-50 flex justify-center items-center"
                     onClick={ () => searchVat() }
                 >
                     <img

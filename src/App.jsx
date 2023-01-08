@@ -12,7 +12,7 @@ const App = () => {
     const [ companyData, setCompanyData ] = useState( undefined )
 
     return(
-        <div className='h-screen w-screen overflow-x-hidden'>
+        <div className='overflow-x-hidden'>
             <header>
                 <Nav />
             </header>
@@ -20,7 +20,7 @@ const App = () => {
                 <AppMainContent setCompanyData={ setCompanyData } />
                 <Result companyData={ companyData } />
             </main>
-            <footer className={`w-full ${ companyData === undefined && 'absolute bottom-0' }`}>
+            <footer className={`w-full ${ companyData === undefined && 'absolute bottom-0 ' }`}>
                 <Footer />
             </footer>
         </div>

@@ -2,9 +2,9 @@ const Result = ( { companyData } ) => {
     return(
         <div className="px-8">
             { companyData !== undefined &&
-                <div className="py-16 mb-4 border border-r-0 border-l-0 border-b-0">
-                    <ul>
-                        <li className="text-xl">
+                <div className="lg:py-16 py-12 mb-4 border border-r-0 border-l-0 border-b-0">
+                    <ul className="lg:text-base md:text-base text-sm">
+                        <li className="lg:text-xl md:text-xl text-lg">
                             Result for:
                             <strong>
                                 &nbsp;{ companyData?.identifier }

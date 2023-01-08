@@ -11,10 +11,10 @@ const Nav = () => {
                 <img
                     src={ logo }
                     alt="logo.png"
-                    width="138"
+                    className='lg:w-36 md:w-24 w-20'
                 />
             </a>
-            <ul className='flex'>
+            <ul className='flex items-center lg:text-base md:text-sm text-xs'>
                 <li>
                     <a
                         href="https://www.linkedin.com/in/thomas-deman-168562193/"
@@ -25,7 +25,7 @@ const Nav = () => {
                         Linkedin
                     </a>
                 </li>
-                <li className='px-6 lg:px-20 md:px-12'>
+                <li className='px-2 lg:px-20 md:px-12'>
                     <a
                         href="https://github.com/tom-deman"
                         target="_blank"
