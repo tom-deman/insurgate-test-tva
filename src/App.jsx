@@ -20,7 +20,7 @@ const App = () => {
                 <AppMainContent setCompanyData={ setCompanyData } />
                 <Result companyData={ companyData } />
             </main>
-            <footer className={`w-full ${ companyData === undefined && 'absolute bottom-0 ' }`}>
+            <footer className={`w-full lg:block hidden ${ companyData === undefined && 'lg:absolute lg:bottom-0' }`}>
                 <Footer />
             </footer>
         </div>
