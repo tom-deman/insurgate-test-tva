@@ -2,7 +2,7 @@ import logo from '../assets/img/logo.png'
 
 const Nav = () => {
     return(
-        <nav className='flex justify-around py-6 shadow-md shadow-gray-100'>
+        <nav className='flex justify-around py-6 shadow-md shadow-gray-100 bg-white'>
             <a
                 href="https://www.insurgate.com"
                 target="_blank"
@@ -25,7 +25,7 @@ const Nav = () => {
                         Linkedin
                     </a>
                 </li>
-                <li className='px-20'>
+                <li className='px-6 lg:px-20 md:px-12'>
                     <a
                         href="https://github.com/tom-deman"
                         target="_blank"

@@ -1,3 +1,10 @@
 .insurgate-primary-color{
     color: rgba(85, 85, 255, 1)
 }
+
+.illustration{
+    background-image: url('../img/undraw_Location_search_re_ttoj.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

@@ -2,8 +2,7 @@ import './assets/css/tailwind.css'
 import './assets/css/main.css'
 
 import Nav from './components/Nav'
-import AppDescription from './components/AppDescription'
-import SearchField from './components/SearchField'
+import AppMainContent from './components/AppMainContent'
 import Result from './components/Result'
 import Footer from './components/Footer'
 
@@ -13,9 +12,8 @@ const App = () => {
             <header>
                 <Nav />
             </header>
-            <main>
-                <AppDescription />
-                <SearchField />
+            <main className='container mx-auto'>
+                <AppMainContent />
                 <Result />
             </main>
             <footer>
