@@ -8,9 +8,8 @@ import AppMainContent from './components/AppMainContent'
 import Result from './components/Result'
 import Footer from './components/Footer'
 
-
 const App = () => {
-    const [ companyData, setCompanyData ] = useState( '' )
+    const [ companyData, setCompanyData ] = useState( undefined )
 
     return(
         <div className='h-screen w-screen overflow-x-hidden'>
@@ -18,14 +17,10 @@ const App = () => {
                 <Nav />
             </header>
             <main className='container mx-auto'>
-                <AppMainContent
-                    setCompanyData={ setCompanyData }
-                />
-                <Result
-                    companyData={ companyData }
-                />
+                <AppMainContent setCompanyData={ setCompanyData } />
+                <Result companyData={ companyData } />
             </main>
-            <footer>
+            <footer className={`w-full ${ companyData === undefined && 'absolute bottom-0' }`}>
                 <Footer />
             </footer>
         </div>

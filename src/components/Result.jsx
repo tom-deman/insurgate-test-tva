@@ -1,7 +1,7 @@
 const Result = ( { companyData } ) => {
     return(
         <div className="px-8">
-            { companyData !== '' &&
+            { companyData !== undefined &&
                 <div className="py-16 mb-4 border border-r-0 border-l-0 border-b-0">
                     <ul>
                         <li className="text-xl">
@@ -22,9 +22,9 @@ const Result = ( { companyData } ) => {
                             </li>
                         }
                         <li>
-                            { companyData.addresses && companyData.addresses.map( el => {
+                            { companyData.addresses && companyData.addresses.map( ( el, index ) => {
                                 return(
-                                    <>
+                                    <div key={ index }>
                                         <p className="py-1">
                                             Country: { el?.country_code }
                                         </p>
@@ -36,7 +36,7 @@ const Result = ( { companyData } ) => {
                                                 ${ el.municipality !== null ? el.municipality : '' }
                                                 ${ el.country_code }` }
                                         </p>
-                                    </>
+                                    </div>
                                 )
                             } ) }
                         </li>
@@ -55,13 +55,13 @@ const Result = ( { companyData } ) => {
                                     Sector of activity:
                                 </span>
                                 <ul className="list-decimal pl-8 mt-2">
-                                    { companyData?.activities?.map( el => {
+                                    { companyData?.activities?.map( ( el, index ) => {
                                         return(
-                                            <>
-                                                <li className="pl-2">
+                                            <li key={ index }>
+                                                <p className="pl-2">
                                                     { el.label?.fr?.label }
-                                                </li>
-                                            </>
+                                                </p>
+                                            </li>
                                         )
                                     } ) }
                                 </ul>

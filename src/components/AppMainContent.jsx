@@ -1,6 +1,6 @@
 import SearchField from './SearchField'
 
-const AppMainContent = ({ setCompanyData }) => {
+const AppMainContent = ( { setCompanyData } ) => {
     return(
         <div className="flex mt-16 py-10 px-8 mb-8">
             <div className='w-1/2'>

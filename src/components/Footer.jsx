@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 const Footer = () => {
     const currentYear = () => {
         return new Date().getFullYear()

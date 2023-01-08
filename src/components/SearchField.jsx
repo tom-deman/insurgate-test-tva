@@ -1,14 +1,15 @@
 import { useState } from 'react'
+
 import search from '../assets/img/690150.png'
 
-const SearchField = ({ setCompanyData }) => {
+const SearchField = ( { setCompanyData } ) => {
     const [ inputValue, setInputValue ] = useState( '' )
     const [ error, setError ] = useState( '' )
 
-    const beVatRegex = new RegExp('^(BE)?0[0-9]{9}$')
+    const beVatRegex = new RegExp( '^(BE)?0[0-9]{9}$' )
 
     const changeInputValue = ( event ) => {
-        setInputValue( event.target.value )
+        setInputValue( event.target.value.trim() )
     }
 
     const searchVat = async() => {
@@ -25,10 +26,7 @@ const SearchField = ({ setCompanyData }) => {
                 headers: headers
             } )
                 .then( res => res.json() )
-                .then( data => {
-                    console.log( data.company )
-                    setCompanyData( data.company )
-                } )
+                .then( data => { setCompanyData( data.company ) } )
                 .catch( err => console.error( err ) )
         }
     }
